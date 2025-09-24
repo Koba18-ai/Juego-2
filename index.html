@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Juego de Contraseñas Seguras</title>
-  <link rel="stylesheet" href="style.css">
-
-  <!-- SweetAlert2 para mensajes bonitos -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <div class="container">
     <h1>🔐 Juego de Contraseñas Seguras</h1>
     <p>Arrastra las contraseñas al lugar correcto.</p>
-
-    <div class="game-area">
-      <div class="passwords" id="passwords">
+    <div class="game">
+      <div class="column">
         <h2>Contraseñas</h2>
+        <div id="passwords" class="dropzone">
+          <div class="password" draggable="true">123456</div>
+          <div class="password" draggable="true">admin</div>
+          <div class="password" draggable="true">Qwerty</div>
+          <div class="password" draggable="true">!S3gur@Clave99</div>
+          <div class="password" draggable="true">Password2024!</div>
+        </div>
       </div>
-
-      <div class="classification">
+      <div class="column">
         <h2>Clasificación</h2>
-        <div class="dropzone" id="inseguras">
+        <div id="insecure" class="dropzone">
           <h3>🚫 Inseguras</h3>
         </div>
-        <div class="dropzone" id="seguras">
+        <div id="secure" class="dropzone">
           <h3>✅ Seguras</h3>
         </div>
       </div>
     </div>
+    <button id="finishBtn">Finalizar</button>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
+
