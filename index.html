@@ -5,45 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Juego de Contraseñas Seguras</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- SweetAlert2 para mensajes bonitos -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
   <div class="container">
     <h1>🔐 Juego de Contraseñas Seguras</h1>
     <p>Arrastra las contraseñas al lugar correcto.</p>
 
-    <div class="game">
-      <div class="options">
+    <div class="game-area">
+      <div class="passwords" id="passwords">
         <h2>Contraseñas</h2>
-        <div class="draggable" draggable="true">123456</div>
-        <div class="draggable" draggable="true">Qwerty</div>
-        <div class="draggable" draggable="true">Password2024!</div>
-        <div class="draggable" draggable="true">Fabian123</div>
-        <div class="draggable" draggable="true">!S3gur@Clave99</div>
-        <div class="draggable" draggable="true">admin</div>
       </div>
 
-      <div class="dropzones">
+      <div class="classification">
         <h2>Clasificación</h2>
-        <div class="dropzone" data-type="insegura">🚫 Inseguras</div>
-        <div class="dropzone" data-type="segura">✅ Seguras</div>
+        <div class="dropzone" id="inseguras">
+          <h3>🚫 Inseguras</h3>
+        </div>
+        <div class="dropzone" id="seguras">
+          <h3>✅ Seguras</h3>
+        </div>
       </div>
     </div>
-
-    <div id="mensaje"></div>
   </div>
 
   <script src="script.js"></script>
-
-  <!-- Modal de Felicitaciones -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2 class="animate-fade">🎉 ¡Felicidades, lo lograste!</h2>
-      <p class="fragment animate-glow">🔑 Fragmento encontrado: <b>S3N4M0</b></p>
-      <div id="riddle" class="riddle"></div>
-      <p class="hint">👉 Pista: <b>Administración Educativa</b></p>
-    </div>
-  </div>
-
 </body>
 </html>
